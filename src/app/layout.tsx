@@ -1,6 +1,12 @@
+import React from 'react';
+import "./globals.css";
+import { Roboto_Mono } from "next/font/google";
+import { Button } from "./ui/components/Button/Button";
+
+
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import "./globals.css";
+
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -14,9 +20,14 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
+
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body>
+        <Button/>
+        <main className="">{children}</main>
+      </body>
     </html>
   );
 }
